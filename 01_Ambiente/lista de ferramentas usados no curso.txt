@@ -1,0 +1,9 @@
+Eclipse JEE Neon 3 RC3 - Com Plugins: WindowBuilder, Java Decompiler, JBoss Tools
+JBoss EAP 7.0 (Servidor de Aplicação)
+Java JDK 1.8.0_11
+Apache-maven-3.0.5 (Automatizador de Builds e Gerenciador de dependencias)
+Apache-ActiveMQ-5.9.0 (Servidor de Filas MQ)
+H2-1.3.176 (Banco de Dados)
+Git-2.13.0-64-bit (Ferramenta Cliente para gerenciar codigos-fontes)
+SoapUI-4.5.1 (Ferramenta para Testar Webservices SOAP)
+Jenkins 2.149 (war) (Ferramenta de Integração)

@@ -1,0 +1,1 @@
+Aqui será o workspace utilizado para o projeto do curso no Eclipse.

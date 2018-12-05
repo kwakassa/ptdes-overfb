@@ -1,0 +1,5 @@
+1. Entre na pasta ./valida_marcas/
+
+2. Abra o "cmd" nessa pasta e digite a linha de comando abaixo:
+
+xjc -d src/ VALIDA_MARCAS.xsd -encoding utf-8 -npa

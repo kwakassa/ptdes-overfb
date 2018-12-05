@@ -1,2 +1,0 @@
-Execute o comando abaixo para fazer o deploy do resource-adapter.
-jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy activemq-rar-5.15.8.rar --name=activemq-ra.rar --server-groups=ptdes-group"

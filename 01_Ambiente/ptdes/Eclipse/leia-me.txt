@@ -1,0 +1,5 @@
+Aqui deve conter o programa Eclipse JEE Neon 3 RC3 com os Plugins:
+- Jboss Tools
+- Java Decompiler
+- Sonar Lint
+- Window Builder
