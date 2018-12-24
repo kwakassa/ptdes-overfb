@@ -1,0 +1,108 @@
+--- Comandos Basicos ---
+--- Instrucoes basicas ---
+
+1. Navegue ate uma um diretorio que deseje criar uma pasta que representará seu repositorio local vinculado a um repositorio remoto do git com o comando abaixo:
+
+    git clone <url_git> -> Cria um repositorio local apartir de um repositorio remoto
+
+2. Faça alterações, nos arquivos de seu projeto que se encontra nesse repositório.
+
+3. Acrescente todos os arquivos modificados para serem incluidos en proximo commit, com o commando:
+
+    git add ./
+
+4. Realize o commit (aplicação das modificações localmente) com o comando abaixo:
+
+    git commit -m "Comentario desejado"
+
+5. Aplica essas alteracoes no repositorio remoto:
+
+    git push <apelido_repo>
+
+obs: por padrao o apelido do primeiro repositorio remoto ew "origin".
+
+6. Sempre que possivel sincronize o repositorio local com o remoto com o commando:
+
+    git pull <apelido_repo>
+(normalmente "origin")
+
+7. Para mudar o foco para uma determinada branch, use o comando:
+
+    git checkout <branch>
+	
+8. Para criar uma nova branch e mudar o foco, use o comando:
+
+git checkout -t <apelido_repo>/<branch> -> cria a branch, muda o foco, faz o link local/remoto
+
+9. Outros comandos uteis mais usados:
+
+git status -> Mostra o status das modificacoes e em que estagio
+git reset --hard <apelido_repo>/<branch> -> Reseta mudancas apartir do repositorio remoto. Ex: git reset --hard origin/master
+git remote -> mostra quais repositorios remotos(apelidos) o repositorio local esta associado
+git remote ger-url <apelido_repo> -> Mostra a url remota que o apelido esta associado
+git remote add <apelido_repo> <url_repositorio_remoto> -> adiciona um apelido associado a uma url de repositorio remoto
+git remote set-url <apelido_repo> <url_repo> -> Altera a url de um apelido de repositorio remoto
+git remote rename <apelido_repo_old> <apelido_repo_new> -> muda o nome do apelido do repositorio remoto
+
+
+
+
+--- Coletanea de outros comandos do GIT ---
+
+git <parametro/comando> --help -> Abre o help de um comando
+git clone <url_git> -> Cria um repositorio local apartir de um repositorio remoto
+git tag -> Mostra versoes fechadas
+git diff <branch1> <branch2> -> Mostra a diferenca entre 2 branchs
+git blame <path_arquivo> -> Historico de modificacao do arquivo
+git checkout <branch> -> Alterna para um determinada branch
+git init -> Transforma o diretoriio atual em um repositorio local
+git status -> Mostra o status das modificacoes e em que estagio
+git commit -m "Comentario do Commit" -> Realiza um commit local com um determinado comentario
+git config user.name "Nome do Usuario" (--global para aplicar a todos os repositorios) -> Altera o nome do usuario para commit
+git config user.email "email@groselha.br" -> Altera o email do usuario
+git add <arquivo.ext> -> Acrescenta um determinado arquivo modificado
+git add ./ -> Acrescenta todos os arquivos modificados de forma recursiva
+git add -i -> Acrescenta arquivos de forma iterativa
+git branch <nome_branch> -> cria uma branch local
+git checkout <branch> -> muda/alterna para uma branch
+git log -> mostra historico de commits (mostra inclusive o id do commit para resetar se necessario)
+git whatchanged -> Mostra lista de commits com paginacao evidenciando quais arquivos foram alterados entre um commit e outro
+git remote -> mostra quais repositorios remotos(apelidos) o repositorio local esta associado
+git remote ger-url <apelido_repo> -> Mostra a url remota que o apelido esta associado
+git remote add <apelido_repo> <url_repositorio_remoto> -> adiciona um apelido associado a uma url de repositorio remoto
+git push <apelido_repo> <branch>
+git branch -> lista as branchs locais
+git pull -> atualiza o repositorio local com o remoto
+git branch -t <nome_branch> <apelido_repo>/<nome_branch> -> cria uma branch e associa essa com uma branch remota. Ex: git branch -t design origin/design
+git branch -a -> Lista todas as branchs locais e remotas
+git checkout -b <branch> -> cria uma nova branch e muda o foco
+git checkout -t <apelido_repo>/<branch> -> cria a branch, muda o foco, faz o link local/remoto
+git fetch <apelido_repo> -> verifica as atualizacoes em relacao ao remoto (mantem os arquivos locais que estiverem divergentes)
+git rebase <branch_origem> <branch_destino> -> atualiza uma branch com base em outr
+git checkout <nome_arquivo> -> volta o arquivo para o status do ultimo commit (So funciona se nao tiver feito o git add)
+git reset <id_commit> -> volta o estado para determinado commit usando seu id (desfaz todas as alteracoes ate esse ponto)
+git stash -> armazena alteracoes em local temporario
+git stash list -> Mostra se tem alteracoes em local temporario do git
+git stash apply <id_stash> -> aplica as alterações temporarias. Ex: git stash apply stash${0}
+git stash clear
+git stash drop <id_stash>
+
+|- git bisect start            \
+|- git bisect bad <id_commit>   \  deve ser indicado bad ou good para achar o cmiit que se esta procurando
+|- git bisect good <id_commit>  /  
+
+git cherry-pick <id_commit>
+git config --global --unset credencial.helper -> limpa o buffer do armazenador de credenciais (como usuario e senha)
+
+|- git checkout .   -> Remove mudanca apenas de arquivos "Tracked Unstaged"
+|- git clean -f     -> Remove mudancas apenas de arquivos "Untracked Unstaged"
+|- git reset --hard -> Remove mudancas apenas de arquivos "Staged Tracked" e "Unstaged Tracked"
+|- git stash -u     -> Remove todas as mudancas
+
+git pull --all -> atualiza todas as branchs
+git remote set-url <apelido_repo> <url_repo> -> Altera a url de um apelido de repositorio remoto
+git branch -d <branch> -> Deleta branch local (nao deleta a remota. necessario sincronizar com git pull)
+git branch -D <branch> -> deleta branch local e remota
+git log --graph --oneline --all -> Mostra os commits de forma resumida
+git reset --hard <apelido_repo>/<branch> -> Reseta mudancas apartir do repositorio remoto. Ex: git reset --hard origin/master
+git remote rename <apelido_repo_old> <apelido_repo_new> -> muda o nome do apelido do repositorio remoto
